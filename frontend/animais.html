@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Animais | SisPet - DECA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <h2>SisPet <i class="fa-solid fa-paw paw-icon"></i></h2>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="animais.html">Adotar</a></li>
+                <li><a href="apoiar.html">Sobre o Projeto</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="login.html" class="btn-doar">Entrar ou Cadastrar</a>
+        </div>
+    </header>
+
+    <main class="main-layout container">
+
+        <div id="banner-recomendacao" class="banner-match escondido">
+            <div class="banner-content">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <p>Temos peludinhos que dão o <strong>match perfeito</strong> com o seu perfil!</p>
+            </div>
+            <a href="recomendados.html" class="btn-primary btn-sm">Ver Meus Matches</a>
+        </div>
+
+        <section class="card-section">
+            <div class="section-header" style="margin-bottom: 20px;">
+                <h2>Encontre o seu novo amigo</h2>
+            </div>
+            
+            <form id="form-busca">
+                <div class="busca-principal">
+                    <div class="input-group caixa-busca">
+                        <label for="busca-nome">Buscar pet</label>
+                        <input type="text" id="busca-nome" placeholder="Ex: Mingau, Paçoca...">
+                    </div>
+
+                    <div class="input-group caixa-especie">
+                        <label for="busca-especie">Espécie</label>
+                        <select id="busca-especie">
+                            <option value="">Todas</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group caixa-botao">
+                        <button type="button" id="btn-toggle-filtros" class="btn-secondary">
+                            <i class="fa-solid fa-sliders"></i> Filtros Avançados
+                        </button>
+                    </div>
+                </div>
+
+                <div id="filtros-avancados" class="busca-avancada escondido">
+                    
+                    <div class="input-group">
+                        <label for="busca-local">Local de Resgate</label>
+                        <select id="busca-local">
+                            <option value="">Todos os locais</option>
+                            <option value="Restaurante Universitário">Restaurante Universitário</option>
+                            <option value="Bloco de Engenharia">Bloco de Engenharia</option>
+                            <option value="Entrada Principal">Entrada Principal</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-sexo">Sexo</label>
+                        <select id="busca-sexo">
+                            <option value="">Todos</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Fêmea">Fêmea</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-idade">Idade</label>
+                        <select id="busca-idade">
+                            <option value="">Todas</option>
+                            <option value="Filhote">Filhote (0 a 1 ano)</option>
+                            <option value="Adulto">Adulto (1 a 7 anos)</option>
+                            <option value="Idoso">Idoso (+7 anos)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-porte">Porte</label>
+                        <select id="busca-porte">
+                            <option value="">Todos</option>
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-pelagem">Pelagem</label>
+                        <select id="busca-pelagem">
+                            <option value="">Todas</option>
+                            <option value="Curta">Curta</option>
+                            <option value="Média">Média</option>
+                            <option value="Longa">Longa</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-cor">Cor principal</label>
+                        <select id="busca-cor">
+                            <option value="">Todas</option>
+                            <option value="Preto">Preto</option>
+                            <option value="Branco">Branco</option>
+                            <option value="Caramelo">Caramelo</option>
+                            <option value="Rajado">Rajado</option>
+                            <option value="Mesclado">Mesclado</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-castrado">Castrado?</label>
+                        <select id="busca-castrado">
+                            <option value="">Indiferente</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-comportamento">Comportamento</label>
+                        <select id="busca-comportamento">
+                            <option value="">Todos</option>
+                            <option value="Calmo">Calmo</option>
+                            <option value="Brincalhão">Brincalhão</option>
+                            <option value="Tímido">Tímido</option>
+                            <option value="Protetor">Protetor</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="busca-ong">ONG / Instituição</label>
+                        <select id="busca-ong">
+                            <option value="">Todas as ONGs</option>
+                            <option value="DECA">DECA</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group button-group">
+                        <button type="button" id="btn-limpar" class="btn-secondary" style="padding: 10px; font-size: 0.9rem;">Limpar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="card-section">
+            <div class="section-header">
+                <h2>Todos os Animais</h2>
+            </div>
+            <div id="resultados-container" class="vitrine-grid">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/animais.js"></script>
+</body>
+</html>
