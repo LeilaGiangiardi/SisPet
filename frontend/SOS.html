@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS | Casos Urgentes SisPet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <h2>SisPet <i class="fa-solid fa-paw paw-icon"></i></h2>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="animais.html">Adote</a></li>
+            <li><a href="sobre-o-projeto.html">Sobre o projeto</a></li>
+            <li><a href="sos.html" style="color: #D9534F; font-weight: 700;">Casos Urgentes</a></li>
+        </ul>
+        <div class="header-actions">
+            <a href="login.html" class="btn-doar">Entrar ou Cadastrar</a>
+        </div>
+    </nav>
+
+    <div class="container main-layout" style="margin-top: 30px;">
+        
+        <section class="card-section" style="border-top: 4px solid #D9534F;">
+            <div class="destaque-layout">
+                <div class="destaque-info">
+                    <h1 style="color: #D9534F;">Eles precisam de você agora.</h1>
+                    <p>Conheça os animais resgatados que estão lutando por suas vidas. Os custos com cirurgias, internações e medicamentos intensivos são altos, e não podemos salvá-los sem a sua ajuda. Cada centavo aproxima um animal da cura.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-truck-medical" style="color: #D9534F;"></i> Fila de Emergência (UTI e Cirurgias)</h2>
+            </div>
+
+            <div class="sos-grid">
+                
+                <div class="sos-card">
+                    <div class="sos-img-container">
+                        <div class="sos-badge critical">Internado: UTI</div>
+                        <a href="perfil-animal.html?id=bolinha" class="sos-img-link">
+                            <img src="assets/img/dog1.png" alt="Cachorro Bolinha machucado">
+                            <div class="sos-img-overlay">
+                                <i class="fa-solid fa-file-medical"></i>
+                                <span>Ver Prontuário Completo</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sos-info">
+                        <div class="sos-header-flex">
+                            <a href="perfil-animal.html?id=bolinha" style="text-decoration: none;">
+                                <h3 style="transition: color 0.3s; color: var(--text-color);" onmouseover="this.style.color='#D9534F'" onmouseout="this.style.color='var(--text-color)'">
+                                    Bolinha <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #A0A5B0; margin-left: 5px;"></i>
+                                </h3>
+                            </a>
+                            <span class="ong-tag deca-tag">Resgate DECA</span>
+                        </div>
+                        <p class="sos-diag"><strong>Situação:</strong> Atropelamento próximo ao RU. Fratura exposta na pata traseira e hemorragia interna.</p>
+                        
+                        <div class="sos-progress-container">
+                            <div class="progress-labels">
+                                <span class="arrecadado">R$ 1.050,00</span>
+                                <span class="meta">Meta: R$ 1.500,00</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%;"></div>
+                            </div>
+                            <p class="progress-text"><strong>70% alcançado!</strong> Faltam apenas R$ 450.</p>
+                        </div>
+                        <button class="btn-sos-action"><i class="fa-brands fa-pix"></i> Ajudar Bolinha Agora</button>
+                        <div class="social-proof"><i class="fa-solid fa-heart"></i> 92 pessoas já ajudaram este caso.</div>
+                    </div>
+                </div>
+
+                <div class="sos-card">
+                    <div class="sos-img-container">
+                        <div class="sos-badge warning">Isolamento Clínico</div>
+                        <a href="perfil-animal.html?id=nina" class="sos-img-link">
+                            <img src="assets/img/gato1.png" alt="Gatinha Nina doente">
+                            <div class="sos-img-overlay">
+                                <i class="fa-solid fa-file-medical"></i>
+                                <span>Ver Prontuário Completo</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sos-info">
+                        <div class="sos-header-flex">
+                            <a href="perfil-animal.html?id=nina" style="text-decoration: none;">
+                                <h3 style="transition: color 0.3s; color: var(--text-color);" onmouseover="this.style.color='#D9534F'" onmouseout="this.style.color='var(--text-color)'">
+                                    Nina <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #A0A5B0; margin-left: 5px;"></i>
+                                </h3>
+                            </a>
+                            <span class="ong-tag ong-parceira">ONG Parceira</span>
+                        </div>
+                        <p class="sos-diag"><strong>Situação:</strong> Resgatada com esporotricose avançada e desnutrição severa. O tratamento é longo.</p>
+                        
+                        <div class="sos-progress-container">
+                            <div class="progress-labels">
+                                <span class="arrecadado">R$ 120,00</span>
+                                <span class="meta">Meta: R$ 800,00</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%; background-color: #F4A261;"></div>
+                            </div>
+                            <p class="progress-text"><strong>15% alcançado.</strong> Precisamos iniciar a medicação!</p>
+                        </div>
+                        <button class="btn-sos-action"><i class="fa-brands fa-pix"></i> Ajudar Nina Agora</button>
+                        <div class="social-proof"><i class="fa-solid fa-heart"></i> 14 pessoas já ajudaram este caso.</div>
+                    </div>
+                </div>
+
+                <div class="sos-card">
+                    <div class="sos-img-container">
+                        <div class="sos-badge critical">Risco de Morte</div>
+                        <a href="perfil-animal.html?id=mel" class="sos-img-link">
+                            <img src="assets/img/dog2filhote.png" alt="Filhote Mel internado">
+                            <div class="sos-img-overlay">
+                                <i class="fa-solid fa-file-medical"></i>
+                                <span>Ver Prontuário Completo</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sos-info">
+                        <div class="sos-header-flex">
+                            <a href="perfil-animal.html?id=mel" style="text-decoration: none;">
+                                <h3 style="transition: color 0.3s; color: var(--text-color);" onmouseover="this.style.color='#D9534F'" onmouseout="this.style.color='var(--text-color)'">
+                                    Mel <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #A0A5B0; margin-left: 5px;"></i>
+                                </h3>
+                            </a>
+                            <span class="ong-tag deca-tag">Protetor Independente</span>
+                        </div>
+                        <p class="sos-diag"><strong>Situação:</strong> Filhote com Parvovirose severa. Internada com vômitos e diarreia. Custo diário alto.</p>
+                        
+                        <div class="sos-progress-container">
+                            <div class="progress-labels">
+                                <span class="arrecadado">R$ 360,00</span>
+                                <span class="meta">Meta: R$ 900,00</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%; background-color: #D9534F;"></div>
+                            </div>
+                            <p class="progress-text"><strong>40% alcançado.</strong> Sua doação paga as diárias!</p>
+                        </div>
+                        <button class="btn-sos-action"><i class="fa-brands fa-pix"></i> Ajudar Mel a Sobreviver</button>
+                        <div class="social-proof"><i class="fa-solid fa-heart"></i> 37 pessoas já ajudaram este caso.</div>
+                    </div>
+                </div>
+
+                <div class="sos-card">
+                    <div class="sos-img-container">
+                        <div class="sos-badge warning">Pré-operatório</div>
+                        <a href="perfil-animal.html?id=simba" class="sos-img-link">
+                            <img src="assets/img/gato2.png" alt="Gato Simba aguardando cirurgia">
+                            <div class="sos-img-overlay">
+                                <i class="fa-solid fa-file-medical"></i>
+                                <span>Ver Prontuário Completo</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sos-info">
+                        <div class="sos-header-flex">
+                            <a href="perfil-animal.html?id=simba" style="text-decoration: none;">
+                                <h3 style="transition: color 0.3s; color: var(--text-color);" onmouseover="this.style.color='#D9534F'" onmouseout="this.style.color='var(--text-color)'">
+                                    Simba <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #A0A5B0; margin-left: 5px;"></i>
+                                </h3>
+                            </a>
+                            <span class="ong-tag deca-tag">Resgate DECA</span>
+                        </div>
+                        <p class="sos-diag"><strong>Situação:</strong> Diagnosticado com obstrução uretal crônica. Precisa de uma cirurgia urgente.</p>
+                        
+                        <div class="sos-progress-container">
+                            <div class="progress-labels">
+                                <span class="arrecadado">R$ 1.700,00</span>
+                                <span class="meta">Meta: R$ 2.000,00</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                            <p class="progress-text"><strong>85% alcançado!</strong> Faltam apenas R$ 300 para a cirurgia.</p>
+                        </div>
+                        <button class="btn-sos-action"><i class="fa-brands fa-pix"></i> Doar os R$ 300 Restantes</button>
+                        <div class="social-proof"><i class="fa-solid fa-heart"></i> 105 pessoas já ajudaram este caso.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h2 class="footer-logo">SisPet <i class="fa-solid fa-paw"></i></h2>
+                <p>Uma iniciativa dedicada a transformar a vida dos animais no campus da DECA e a dar suporte para ONGs e protetores locais.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="animais.html">Adote</a></li>
+                    <li><a href="sobre-o-projeto.html">Sobre o projeto</a></li>
+                    <li><a href="sos.html">Casos Urgentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>contato@sispet.com</span></div>
+                <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>(87) 99999-1234</span></div>
+                <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Campus DECA - Bloco Central</span></div>
+            </div>
+            <div class="footer-col">
+                <h3>Siga-nos</h3>
+                <p>Acompanhe o dia a dia e resgates nas redes sociais.</p>
+                <div class="footer-social-links">
+                    <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 SisPet. Todos os direitos reservados.</p></div>
+    </footer>
+
+    <div class="modal-overlay" id="modalPix">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+            <div id="viewPagamento">
+                <h3 style="color: var(--text-color); margin-bottom: 10px;">Ajudar a Salvar uma Vida</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem;">Escaneie o QR Code ou copie a chave PIX abaixo. Qualquer valor faz a diferença!</p>
+                
+                <div class="qr-code-box">
+                    <i class="fa-solid fa-qrcode" style="font-size: 8rem; color: #D5D9DE; margin-bottom: 15px; display: block;"></i>
+                    <p style="font-size: 0.85rem; color: var(--text-light); font-weight: 600;">Recebedor: ONG DECA<br>CNPJ: 00.000.000/0001-00</p>
+                </div>
+
+                <div class="chave-pix-container">
+                    <input type="text" id="chavePix" value="00000000000100" readonly>
+                    <button id="btnCopiarPix" class="btn-copiar"><i class="fa-regular fa-copy"></i> Copiar</button>
+                </div>
+
+                <button id="btnConfirmarDoacao" class="btn-primary" style="width: 100%; margin-top: 10px; background-color: #D9534F;">Já fiz o PIX</button>
+            </div>
+            <div id="viewSucesso" class="sucesso-doacao">
+                <i class="fa-solid fa-circle-check sucesso-icon"></i>
+                <h3 style="color: #2A9D8F; font-size: 1.6rem;">Doação Recebida!</h3>
+                <p style="color: var(--text-light); font-size: 1rem; line-height: 1.5;">Obrigado por ser um herói hoje. O valor já foi contabilizado para o tratamento.</p>
+                
+                <div style="background-color: #FFF0E6; border: 1px solid #FAD1B8; padding: 20px; border-radius: 12px; margin-top: 15px;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 8px;"><i class="fa-solid fa-star"></i> Torne-se um Doador Frequente</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px;">Crie uma conta para acompanhar o histórico clínico e a recuperação dos animais que você ajuda.</p>
+                    <a href="login.html" class="btn-outline" style="width: 100%;">Criar Conta Rápida</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/doacao.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
