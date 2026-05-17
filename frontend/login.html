@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar ou Cadastrar | SisPet - DECA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page-bg">
+
+    <a href="index.html" class="logo-voltar-fixo">
+        <h2>SisPet <i class="fa-solid fa-paw paw-icon"></i></h2>
+    </a>
+
+    <div class="auth-centered-container">
+        
+        <div class="auth-phrase-left">
+            <p>Toda grande amizade começa com um simples "olá".</p>
+        </div>
+
+        <div class="auth-card">
+            
+            <div class="auth-card-header">
+                <h3>Olá!</h3>
+                <p>Faça login ou cadastre-se para ajudar os animais do SisPet.</p>
+            </div>
+
+            <div class="auth-form-container">
+                
+                <div class="auth-tabs">
+                    <button class="tab-btn ativo" id="tab-login">Entrar</button>
+                    <button class="tab-btn" id="tab-cadastro">Cadastrar</button>
+                </div>
+
+                <form id="form-login" class="auth-form">
+                    <div class="input-group">
+                        <label for="login-identificacao">E-mail, Telefone ou Usuário</label>
+                        <input type="text" id="login-identificacao" placeholder="Digite aqui...">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="login-senha">Senha</label>
+                        <input type="password" id="login-senha" placeholder="Sua senha secreta">
+                    </div>
+
+                    <div class="auth-opcoes">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span> Lembrar de mim
+                        </label>
+                        <a href="#" class="link-esqueceu">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary auth-btn">Entrar</button>
+                </form>
+
+                <form id="form-cadastro" class="auth-form escondido">
+                    <div class="input-group">
+                        <label for="cad-nome">Nome Completo</label>
+                        <input type="text" id="cad-nome" placeholder="Como gosta de ser chamado?">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cad-identificacao">E-mail ou Telefone</label>
+                        <input type="text" id="cad-identificacao" placeholder="Para mantermos contato">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="cad-senha">Criar Senha</label>
+                        <input type="password" id="cad-senha" placeholder="Mínimo de 8 caracteres">
+                    </div>
+
+                    <button type="submit" class="btn-primary auth-btn">Criar Conta básica</button>
+                    <p class="termos-texto">Ao se cadastrar, você concorda com os <a href="#">Termos de Uso</a>.</p>
+                </form>
+
+                <div class="divisor" style="margin-top: 25px;">
+                    <span>ou entre com</span>
+                </div>
+
+                <div class="social-login-circles">
+                    <button type="button" class="btn-circle google" title="Entrar com Google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+                    </button>
+                    <button type="button" class="btn-circle facebook" title="Entrar com Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                    <button type="button" class="btn-circle apple" title="Entrar com Apple">
+                        <i class="fa-brands fa-apple"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
