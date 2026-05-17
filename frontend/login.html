@@ -3,93 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar ou Cadastrar | SisPet - DECA</title>
+    <title>SisPet | Entrar</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="auth-page-bg">
+<body>
 
-    <a href="index.html" class="logo-voltar-fixo">
-        <h2>SisPet <i class="fa-solid fa-paw paw-icon"></i></h2>
-    </a>
+    <div class="auth-page-bg">
+        <a href="index.html" class="logo-voltar-fixo">
+            <h2>SisPet <i class="fa-solid fa-paw"></i></h2>
+        </a>
 
-    <div class="auth-centered-container">
-        
-        <div class="auth-phrase-left">
-            <p>Toda grande amizade começa com um simples "olá".</p>
-        </div>
-
-        <div class="auth-card">
+        <div class="auth-centered-container">
             
-            <div class="auth-card-header">
-                <h3>Olá!</h3>
-                <p>Faça login ou cadastre-se para ajudar os animais do SisPet.</p>
+            <div class="auth-phrase-left">
+                <p>Conectando amor<br>e responsabilidade.</p>
             </div>
 
-            <div class="auth-form-container">
+            <div class="auth-card">
                 
-                <div class="auth-tabs">
-                    <button class="tab-btn ativo" id="tab-login">Entrar</button>
-                    <button class="tab-btn" id="tab-cadastro">Cadastrar</button>
+                <div id="viewLogin">
+                    <div class="auth-card-header">
+                        <h3>Bem-vindo de volta</h3>
+                        <p>Insira suas credenciais para acessar sua conta.</p>
+                    </div>
+
+                    <form id="formLogin" onsubmit="event.preventDefault(); window.location.href='index.html';">
+                        <div class="input-group" style="margin-bottom: 15px;">
+                            <label for="loginEmail">E-mail</label>
+                            <input type="email" id="loginEmail" placeholder="exemplo@email.com" required>
+                        </div>
+                        <div class="input-group" style="margin-bottom: 25px;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <label for="loginSenha">Senha</label>
+                                <a href="#" class="link-esqueceu">Esqueceu a senha?</a>
+                            </div>
+                            <input type="password" id="loginSenha" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Entrar no SisPet</button>
+                    </form>
+
+                    <div class="divisor" style="margin-top: 25px;"><span>ou entre com</span></div>
+                    <div class="social-login-circles">
+                        <button class="btn-circle google">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22px" height="22px">
+                                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                                <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                                <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                                <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="btn-circle facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                        
+                        <button class="btn-circle apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </button>
+                    </div>
+
+                    <p class="auth-switch-text" style="text-align: center; margin-top: 25px; color: var(--text-light);">
+                        Novo aqui? <a href="#" id="linkIrParaCadastro" style="color: var(--primary-color); font-weight: 600;">Cadastre-se</a>
+                    </p>
                 </div>
 
-                <form id="form-login" class="auth-form">
-                    <div class="input-group">
-                        <label for="login-identificacao">E-mail, Telefone ou Usuário</label>
-                        <input type="text" id="login-identificacao" placeholder="Digite aqui...">
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="login-senha">Senha</label>
-                        <input type="password" id="login-senha" placeholder="Sua senha secreta">
+                <div id="viewCadastro" style="display: none;">
+                    <div class="auth-card-header">
+                        <h3>Criar uma conta</h3>
+                        <p>Preencha as informações para se registrar.</p>
                     </div>
 
-                    <div class="auth-opcoes">
-                        <label class="checkbox-container">
-                            <input type="checkbox" checked>
-                            <span class="checkmark"></span> Lembrar de mim
-                        </label>
-                        <a href="#" class="link-esqueceu">Esqueceu a senha?</a>
+                    <div class="step-progress-bar">
+                        <div class="progress-line" id="progressLine"></div>
+                        <div class="step-dot active" data-step="1"></div>
+                        <div class="step-dot" data-step="2"></div>
+                        <div class="step-dot" data-step="3"></div>
+                        <div class="step-dot" data-step="4" id="dotEtapa4"></div>
                     </div>
 
-                    <button type="submit" class="btn-primary auth-btn">Entrar</button>
-                </form>
-
-                <form id="form-cadastro" class="auth-form escondido">
-                    <div class="input-group">
-                        <label for="cad-nome">Nome Completo</label>
-                        <input type="text" id="cad-nome" placeholder="Como gosta de ser chamado?">
+                    <div class="toggle-container" id="perfilToggleContainer">
+                        <div class="toggle-btn active" id="btnPerfilPF" onclick="mudarTipoPerfil('PF')">Pessoa Física</div>
+                        <div class="toggle-btn" id="btnPerfilONG" onclick="mudarTipoPerfil('ONG')">ONG / Protetor</div>
                     </div>
 
-                    <div class="input-group">
-                        <label for="cad-identificacao">E-mail ou Telefone</label>
-                        <input type="text" id="cad-identificacao" placeholder="Para mantermos contato">
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="cad-senha">Criar Senha</label>
-                        <input type="password" id="cad-senha" placeholder="Mínimo de 8 caracteres">
-                    </div>
+                    <form id="formCadastroStepper" onsubmit="event.preventDefault();">
+                        
+                        <div class="step-container active" data-step="1">
+                            <div id="etapa1PF">
+                                <h4 style="margin-bottom: 5px;">O que deseja fazer no SisPet?</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 15px;">Selecione as opções que combinam com você:</p>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-tile" onclick="toggleCheckbox('checkAdotar')">
+                                        <input type="checkbox" id="checkAdotar" value="adotante">
+                                        <label for="checkAdotar">Quero Adotar <span>Ver pets e iniciar adoção</span></label>
+                                    </div>
+                                    <div class="checkbox-tile" onclick="toggleCheckbox('checkVoluntario')">
+                                        <input type="checkbox" id="checkVoluntario" value="voluntario">
+                                        <label for="checkVoluntario">Quero ser Voluntário <span>Ajudar nos resgates</span></label>
+                                    </div>
+                                    <div class="checkbox-tile" onclick="toggleCheckbox('checkDoar')">
+                                        <input type="checkbox" id="checkDoar" value="doador">
+                                        <label for="checkDoar">Quero Doar <span>Contribuir com casos SOS</span></label>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <button type="submit" class="btn-primary auth-btn">Criar Conta básica</button>
-                    <p class="termos-texto">Ao se cadastrar, você concorda com os <a href="#">Termos de Uso</a>.</p>
-                </form>
+                            <div id="etapa1ONG" style="display: none;">
+                                <h4 style="margin-bottom: 15px;">Identificação da Organização</h4>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="ongNome">Nome Institucional da ONG / Grupo</label>
+                                    <input type="text" id="ongNome" placeholder="Ex: Defensores da Causa Animal">
+                                </div>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="ongCnpj">CNPJ ou Registro Legal</label>
+                                    <input type="text" id="ongCnpj" placeholder="00.000.000/0001-00">
+                                </div>
+                            </div>
 
-                <div class="divisor" style="margin-top: 25px;">
-                    <span>ou entre com</span>
-                </div>
+                            <div class="btn-flex-group">
+                                <button type="button" class="btn-primary" style="width: 100%;" onclick="proximaEtapa()">Avançar <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
 
-                <div class="social-login-circles">
-                    <button type="button" class="btn-circle google" title="Entrar com Google">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
-                    </button>
-                    <button type="button" class="btn-circle facebook" title="Entrar com Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </button>
-                    <button type="button" class="btn-circle apple" title="Entrar com Apple">
-                        <i class="fa-brands fa-apple"></i>
-                    </button>
+                        <div class="step-container" data-step="2">
+                            <div id="etapa2PF">
+                                <h4 style="margin-bottom: 15px;">Dados Pessoais</h4>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="pfNome">Nome Completo</label>
+                                    <input type="text" id="pfNome" placeholder="Seu nome completo">
+                                </div>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="pfCpf">CPF</label>
+                                    <input type="text" id="pfCpf" placeholder="000.000.000-00">
+                                </div>
+                            </div>
+
+                            <div id="etapa2ONG" style="display: none;">
+                                <h4 style="margin-bottom: 15px;">Localização e Atuação</h4>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="ongCidade">Cidade / Estado</label>
+                                    <input type="text" id="ongCidade" placeholder="Petrolina - PE">
+                                </div>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="ongEndereco">Endereço da Sede ou Abrigo</label>
+                                    <input type="text" id="ongEndereco" placeholder="Rua, número, bairro">
+                                </div>
+                            </div>
+
+                            <div class="btn-flex-group">
+                                <button type="button" class="btn-secondary" onclick="etapaAnterior()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                                <button type="button" class="btn-primary" style="flex: 1;" onclick="proximaEtapa()">Avançar <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="step-container" data-step="3">
+                            <div id="etapa3PF">
+                                <h4 style="margin-bottom: 15px;">Informações de Contato</h4>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="pfTelefone">Telefone / WhatsApp</label>
+                                    <input type="text" id="pfTelefone" placeholder="(87) 99999-0000">
+                                </div>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="pfEndereco">Cidade onde reside</label>
+                                    <input type="text" id="pfEndereco" placeholder="Cidade - Estado">
+                                </div>
+                            </div>
+
+                            <div id="etapa3ONG" style="display: none;">
+                                <h4 style="margin-bottom: 15px;">Verificação de Credibilidade</h4>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="ongRede">Instagram ou Site</label>
+                                    <input type="url" id="ongRede" placeholder="https://instagram.com/suaong">
+                                </div>
+                                <div class="input-group" style="margin-bottom: 15px;">
+                                    <label for="ongResponsavel">Nome do Responsável</label>
+                                    <input type="text" id="ongResponsavel" placeholder="Nome do responsável">
+                                </div>
+                            </div>
+
+                            <div class="btn-flex-group">
+                                <button type="button" class="btn-secondary" onclick="etapaAnterior()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                                <button type="button" class="btn-primary" style="flex: 1;" onclick="proximaEtapa()">Avançar <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="step-container" data-step="4">
+                            <h4 style="margin-bottom: 15px;">Configuração de Segurança</h4>
+                            <div class="input-group" style="margin-bottom: 15px;">
+                                <label for="cadEmail">E-mail de Acesso</label>
+                                <input type="email" id="cadEmail" placeholder="seuemail@provedor.com">
+                            </div>
+                            <div class="input-group" style="margin-bottom: 15px;">
+                                <label for="cadSenha">Crie uma Senha Forte</label>
+                                <input type="password" id="cadSenha" placeholder="No mínimo 6 caracteres">
+                            </div>
+
+                            <div class="btn-flex-group">
+                                <button type="button" class="btn-secondary" onclick="etapaAnterior()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+                                <button type="button" class="btn-primary" style="flex: 1; background-color: #2E7D32;" onclick="finalizarCadastro()">Concluir <i class="fa-solid fa-check"></i></button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <p class="auth-switch-text" style="text-align: center; margin-top: 25px; color: var(--text-light);">
+                        Já possui uma conta? <a href="#" id="linkIrParaLogin" style="color: var(--primary-color); font-weight: 600;">Faça o login aqui</a>
+                    </p>
                 </div>
 
             </div>
