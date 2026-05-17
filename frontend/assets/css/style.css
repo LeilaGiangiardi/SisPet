@@ -443,3 +443,295 @@ body {
 .noticia-link:hover { color: var(--primary-hover); }
 .noticia-link i { font-size: 0.75rem; transition: var(--transition); }
 .noticia-link:hover i { transform: translateX(3px); }
+
+/* ==========================================================================
+   12. SEÇÃO SOS (Casos Urgentes e Apelo Emocional)
+   ========================================================================== */
+.sos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.sos-card {
+    border: 1px solid #E5E9F0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.sos-img-container {
+    position: relative;
+    height: 220px;
+}
+
+.sos-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Efeito Hover para indicar que a foto é clicável (UX Affordance) */
+.sos-img-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sos-img-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(217, 83, 79, 0.85); /* Coral transparente */
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: #FFFFFF; opacity: 0; transition: var(--transition);
+}
+.sos-img-link:hover .sos-img-overlay { opacity: 1; }
+.sos-img-overlay i { font-size: 2rem; margin-bottom: 10px; }
+.sos-img-overlay span { font-weight: 600; font-size: 1.05rem; }
+
+.sos-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.sos-badge.critical { background-color: #D9534F; } /* Coral Suave e Elegante */
+.sos-badge.warning { background-color: #F4A261; } /* Laranja Cuidado */
+
+.sos-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sos-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sos-header-flex h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.ong-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.ong-tag.deca-tag { background-color: #E8F5E9; color: #2E7D32; }
+.ong-tag.ong-parceira { background-color: #F3E5F5; color: #6A1B9A; }
+
+.sos-diag {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Design da Barra de Progresso Psicológica */
+.sos-progress-container {
+    background-color: #F8F9FA;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.progress-labels .arrecadado { color: #2A9D8F; } /* Verde Positivo */
+.progress-labels .meta { color: var(--text-light); }
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #E5E9F0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #2A9D8F; /* Verde preenchendo */
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.btn-sos-action {
+    width: 100%;
+    background-color: #D9534F; /* Coral Suave */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-sos-action:hover {
+    background-color: #C9302C; /* Tom mais escuro para o hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(217, 83, 79, 0.3);
+}
+
+/* ==========================================================================
+   13. MODAL DE DOAÇÃO PIX (Frictionless Checkout)
+   ========================================================================== */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center;
+    backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.3s ease;
+}
+.modal-overlay.ativo { display: flex; opacity: 1; }
+.modal-content {
+    background: #FFFFFF; padding: 40px; border-radius: 20px; max-width: 450px; width: 90%;
+    text-align: center; position: relative; transform: translateY(20px); transition: transform 0.3s ease;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+.modal-overlay.ativo .modal-content { transform: translateY(0); }
+.close-modal {
+    position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--text-light); transition: var(--transition);
+}
+.close-modal:hover { color: var(--primary-color); }
+.qr-code-box {
+    background: #F8F9FA; padding: 20px; border-radius: 12px; margin: 20px 0; border: 1px dashed #D5D9DE;
+}
+.qr-code-box img { width: 150px; height: 150px; margin-bottom: 15px; }
+.chave-pix-container { display: flex; gap: 10px; margin-bottom: 20px; }
+.chave-pix-container input { flex: 1; padding: 10px; border: 1px solid #D5D9DE; border-radius: 8px; text-align: center; font-family: monospace; font-size: 1.1rem; color: var(--text-color); background: #F0F2F5; }
+.btn-copiar { background: var(--text-color); color: #FFF; border: none; padding: 0 15px; border-radius: 8px; cursor: pointer; transition: var(--transition); }
+.btn-copiar:hover { background: var(--primary-color); }
+
+/* Animação de Sucesso */
+.sucesso-doacao { display: none; flex-direction: column; align-items: center; gap: 15px; }
+.sucesso-icon { font-size: 4rem; color: #2A9D8F; animation: popIn 0.5s ease; }
+@keyframes popIn { 0% { transform: scale(0); } 80% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+/* ==========================================================================
+   14. PERFIL DO ANIMAL (Página Única Padronizada)
+   ========================================================================== */
+.perfil-layout { display: flex; gap: 40px; align-items: flex-start; }
+.perfil-sidebar { flex: 0 0 380px; position: sticky; top: 100px; }
+.perfil-main { flex: 1; background: #FFF; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #E5E9F0; }
+.perfil-foto-principal { width: 100%; height: 380px; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); margin-bottom: 20px; }
+.tabela-historico { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.95rem; }
+.tabela-historico th, .tabela-historico td { padding: 15px; text-align: left; border-bottom: 1px solid #E5E9F0; }
+.tabela-historico th { background: #F8F9FA; font-weight: 600; color: var(--text-color); }
+.tabela-historico tr:hover { background-color: #FAFBFC; }
+
+@media (max-width: 900px) {
+    .perfil-layout { flex-direction: column; }
+    .perfil-sidebar { flex: 1; position: relative; top: 0; width: 100%; }
+}
+
+/* ==========================================================================
+   15. PROVA SOCIAL E GALERIA
+   ========================================================================== */
+.social-proof {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 500;
+}
+.social-proof i {
+    color: #D9534F;
+    margin-right: 4px;
+}
+
+/* Modal da Galeria Expandida */
+.gallery-nav-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.gallery-nav-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+.gallery-nav-thumb:hover, .gallery-nav-thumb.ativa {
+    opacity: 1;
+    border-color: var(--primary-color);
+}
+
+/* Setas e Estilo da Galeria Expandida */
+.modal-gallery-content {
+    background: #FFFFFF; /* Fundo branco e limpo em vez de preto */
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 800px;
+    width: 95%;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+.gallery-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: #FFF;
+    border: 1px solid #E5E9F0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    z-index: 10;
+}
+.gallery-arrow:hover { background: var(--primary-color); color: #FFF; border-color: var(--primary-color); }
+.gallery-arrow.left { left: -20px; }
+.gallery-arrow.right { right: -20px; }
+
+@media (max-width: 850px) {
+    .gallery-arrow.left { left: 10px; }
+    .gallery-arrow.right { right: 10px; }
+}
